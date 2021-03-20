@@ -1,0 +1,664 @@
+@import '../SCSS/variables.scss';
+
+
+
+
+.fbpageparent {
+   
+    position: relative;
+    
+    &::before {
+        content: '';
+        background: url('marker.jpeg') no-repeat center center fixed;
+        // background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.25;
+        z-index: -4;
+    }
+
+}
+
+
+.anonheaderContainer {
+    display: flex;
+    flex-direction: row;
+  
+}
+
+
+
+
+
+
+    @include breakpoints(tablet){
+
+        @media(min-width: $breakpoint-large-phone) and (max-width: $breakpoint-tablet){
+
+
+
+            .myTextArea, h1, .fbcategory, .anonheader, .fblabels, .dropDownMenu, .mySubmitbtn, .anonymousbtn, .fbformat {
+                font-family: $roboto-slab;
+                color: $color-grey;
+                font-size: 0.75rem;
+            }
+    
+    
+            .fbpageparent {
+              
+                display:flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100vw;
+                height: 100vh;
+                overflow: scroll;
+                position: relative;
+              
+                &::before {
+                    content: '';
+                    background: url('marker.jpeg') no-repeat center center fixed;
+                    
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.25;
+                    z-index: -4;
+                }
+    
+               
+            
+            }
+
+            .dropDownMenu{
+                font-family: $roboto-slab;
+                height: 5vh;  
+                width: 206px; 
+    
+            }
+            .fbcategory{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+       
+              
+           
+            }
+
+            .dropDownMenu, .myTextArea{
+                margin: auto;
+            }
+    
+            .myTextArea{
+                    width: 200px;
+                
+            
+                }
+                
+     
+            .myTextArea{
+                height: 60%;
+                // align-items: center;
+              
+            }
+            .mySubmitbtn{
+                width: 100px;
+            }
+         
+        
+            .mySubmitbtn, .anonheader{
+                @include btn-theme;
+                padding: 3px;
+                font-size: 0.65rem;
+               
+               
+                
+             
+            }
+        
+            .anonheader{
+                margin-right: 2px;
+              
+            }
+        
+            .anonheaderContainer {
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+                width: 200px;
+            }
+
+
+            .anonheaderContainer, .myTextArea, .dropDownMenu{
+            margin-top: 1%;
+            }
+        
+            .checkbox{
+                    padding-right: 10px;
+            }
+        
+         
+          
+            li.liststyle{
+               
+                display: flex;
+                flex-direction: column;
+                 @include btn-theme;
+                margin: auto;
+                width: 80%;
+                margin-bottom: 5%;
+                padding: 2%;
+                
+    }
+            
+                .catName{
+                    @include border-theme;
+                    width: 20%;
+                    padding: 1px;
+                    margin-bottom: 10px;
+                   
+                }
+    
+    
+                .catName, li.liststyle, .dropDownMenu, .myTextArea{
+                    font-size: 0.75rem;
+                }
+
+
+    
+    }
+
+
+    }
+
+
+
+    @include breakpoints(laptop){
+
+        @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop){
+    
+        
+  
+
+
+    .myTextArea, h1, .fbcategory, .anonheader, .fblabels, .dropDownMenu, .mySubmitbtn, .anonymousbtn, .fbformat {
+        font-family: $roboto-slab;
+        color: $color-grey;
+    }
+
+  
+    .fbpageparent {
+   
+        position: relative;
+        
+        &::before {
+            content: '';
+            background: url('marker.jpeg') no-repeat center center fixed;
+            // background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.25;
+            z-index: -4;
+        }
+    
+    }
+
+      
+
+
+    .fbcategory{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        // background-color: cornflowerblue;
+   
+    }
+
+    
+
+    .dropDownMenu{
+        height: 5vh;
+        color: $color-grey;
+        border: 1px 1px solid $color-purple;
+        font-family: $roboto-slab;
+   
+      
+    }
+
+    .dropDownMenu, .myTextArea, .anonheaderContainer{
+        margin-left: 4vw;
+        width: 30%;
+        margin-top: 1%;
+    }
+ 
+    .myTextArea{
+        height: 70%;   
+    }
+
+    
+    .anonheader{
+        padding-bottom: 5px;
+        width: 50%;
+   
+    }
+
+.anonheaderContainer{
+ 
+    // padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // margin-top: 1%;
+
+  
+}
+
+
+.anonheader, .mySubmitbtn{
+height: 4vh;
+@include btn-theme;
+padding-top: 4%;
+font-size: .75rem;
+}
+
+
+
+.mySubmitbtn{
+    width: 10vw;
+    padding-bottom: 18px;
+    margin-top: 2%;
+}
+
+
+
+
+   
+    .checkbox{
+            padding-right: 10px;
+    }
+
+
+    
+
+    .fbListContainer {
+     
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+      
+    }
+  
+ 
+  
+    .fb-box{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: 30px; //changed this
+        height: 30vh;
+        width: 50vw; //sizes the content ins
+        // justify-content: space-between;
+
+
+         
+       
+    }
+
+
+    li.liststyle{
+        
+        @include btn-theme;
+        @include list-style;
+    
+    }
+
+
+    
+    .catName{
+    
+        @include border-theme;
+        margin-bottom: 20px;
+        width: 20%;
+        padding: 1%;
+        text-align: center;
+
+        
+    }
+
+
+    
+    
+        }
+    
+    
+      
+    
+    }    
+
+
+
+
+@include breakpoints(desktop){
+
+    @media(min-width: $breakpoint-laptop) and (max-width: $breakpoint-desktop){
+
+
+
+        .myTextArea, h1, .fbcategory, .anonheader, .fblabels, .dropDownMenu, .mySubmitbtn, .anonymousbtn, .fbformat {
+            font-family: $roboto-slab;
+            color: $color-grey;
+        }
+    
+      
+        .fbpageparent {
+       
+            position: relative;
+            
+            &::before {
+                content: '';
+                background: url('marker.jpeg') no-repeat center center fixed;
+                // background-position: 0 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                opacity: 0.25;
+                z-index: -4;
+            }
+        
+        }
+    
+          
+    
+    
+        .fbcategory{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            // background-color: cornflowerblue;
+       
+        }
+    
+        
+    
+        .dropDownMenu{
+            height: 5vh;
+            color: $color-grey;
+            border: 1px 1px solid $color-purple;
+            font-family: $roboto-slab;
+       
+          
+        }
+    
+        .dropDownMenu, .myTextArea, .anonheaderContainer{
+            margin-left: 4vw;
+            width: 20%;
+            margin-top: 1%;
+        }
+     
+        .myTextArea{
+            height: 70%;   
+        }
+    
+        
+        .anonheader{
+            padding-bottom: 5px;
+            width: 50%;
+       
+        }
+    
+    .anonheaderContainer{
+     
+        // padding: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // margin-top: 1%;
+    
+      
+    }
+    
+    
+    .anonheader, .mySubmitbtn{
+    height: 4vh;
+    @include btn-theme;
+    padding-top: 4%;
+    font-size: .75rem;
+    }
+    
+    
+    
+    .mySubmitbtn{
+        width: 10vw;
+        padding-bottom: 18px;
+        margin-top: 2%;
+    }
+    
+    
+    
+    
+       
+        .checkbox{
+                padding-right: 10px;
+        }
+    
+    
+        
+    
+        .fbListContainer {
+         
+            display: flex;
+            flex-direction: column;
+            width: 70vw;
+          
+        }
+      
+     
+      
+        .fb-box{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            margin: 30px; //changed this
+            height: 30vh;
+            width: 50vw; //sizes the content ins
+            // justify-content: space-between;
+    
+    
+             
+           
+        }
+    
+    
+        li.liststyle{
+            
+            @include btn-theme;
+            @include list-style;
+        
+        }
+    
+    
+        
+        .catName{
+        
+            @include border-theme;
+            margin-bottom: 20px;
+            width: 20%;
+            padding: 1%;
+            text-align: center;
+    
+            
+        }
+
+    
+
+    }
+
+
+ 
+
+
+}
+
+//Phone mostly finished-- might try to adjust the buttons in a better position
+@include breakpoints(phone){
+
+    @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-large-phone){
+
+        .myTextArea, h1, .fbcategory, .anonheader, .fblabels, .dropDownMenu, .mySubmitbtn, .anonymousbtn, .fbformat {
+            font-family: $roboto-slab;
+            color: $color-grey;
+        }
+
+
+        .fbpageparent {
+          
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: scroll;
+            position: relative;
+          
+            &::before {
+                content: '';
+                background: url('marker.jpeg') no-repeat center center fixed;
+                
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                opacity: 0.25;
+                z-index: -4;
+            }
+
+           
+        
+        }
+
+        .fbcategory, .anonheaderContainer{
+            width: 50%;
+            margin-top: 5%;
+        }
+        // .fbcategory{
+        //     display: flex;
+        //     flex-direction: row;
+        // }
+
+        .dropDownMenu{
+            font-family: $roboto-slab;
+            // width: 40%;
+            height: 5vh;   
+        }
+
+        .dropDownMenu, .anonheaderContainer, .myTextArea{
+          margin-left: 20%;
+          
+        }
+ 
+        .myTextArea{
+            height: 50%;
+            align-items: center;
+            margin-top: 1px;
+        }
+
+        // .myTextArea, .anonheaderContainer{
+        //     width: 50%;
+        // }
+    
+     
+    
+        .mySubmitbtn, .anonheader{
+            @include btn-theme;
+            padding: 5px;
+            
+         
+        }
+    
+        .anonheader{
+            margin-right: 2px;
+        }
+    
+        .anonheaderContainer {
+          
+            margin-top: 1%;  
+            display: flex;
+            flex-direction: row;
+        }
+    
+        .checkbox{
+                padding-right: 10px;
+        }
+    
+     
+      
+        li.liststyle{
+           
+            display: flex;
+            flex-direction: column;
+             @include btn-theme;
+            margin: auto;
+            width: 80%;
+            margin-bottom: 5%;
+            padding: 2%;
+            
+}
+        
+            .catName{
+                @include border-theme;
+                width: 20%;
+                padding: 1px;
+                margin-bottom: 10px;
+               
+            }
+
+
+            .catName, li.liststyle, .dropDownMenu, .anonheader, .mySubmitbtn, .myTextArea{
+                font-size: 0.5rem;
+            }
+            
+
+    
+    }
+    
+   
+
+
+
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+

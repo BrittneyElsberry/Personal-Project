@@ -1,0 +1,60 @@
+@import '../SCSS/variables.scss';
+
+
+
+
+
+@include breakpoints (phone){
+    @media (max-width: $breakpoint-large-phone){
+        .teamList {
+          text-decoration: none;  
+        }
+
+    }
+}
+
+
+@include breakpoints (tablet){
+    @media (min-width: $breakpoint-large-phone)and (max-width: $breakpoint-tablet){
+        
+    }
+}
+
+
+@include breakpoints (laptop){
+    @media (min-width: $breakpoint-tablet)and (max-width: $breakpoint-laptop){
+        
+    }
+}
+
+@include breakpoints (desktop){
+    @media (min-width: $breakpoint-laptop) and (max-width: $breakpoint-desktop){
+        
+    }
+}
+
+.teamListContainer {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    background-color: purple;
+    height: 60vh;
+    width: 60vw;
+    padding:10%;
+   
+    @include border-theme;
+}
+
+.teamList {
+  
+    text-decoration: none;  
+    list-style: none;
+    color: $color-grey;
+    font-family: $roboto-slab;
+  
+  }
+
+  .myteam {
+      font-size: 2em;
+      align-items: center;
+  }

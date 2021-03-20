@@ -1,0 +1,136 @@
+@import '../SCSS/variables.scss';
+
+
+
+
+
+
+ 
+
+@include breakpoints(tablet){
+
+    @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
+    
+    {
+    
+      
+
+        .nav-item{
+            font-size: 0.75em; 
+        }
+        
+    
+    
+    }
+    }
+
+
+
+
+@include breakpoints (laptop){
+
+    @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop){
+
+        .nav-item{
+        
+            font-size: 1.0em;
+            line-height: 1;
+        }
+        
+
+
+    
+} }
+
+
+
+
+@include breakpoints (desktop){
+
+    @media(min-width: $breakpoint-laptop) and (max-width: $breakpoint-desktop){
+
+
+    
+    
+    // .nav-item{
+    //     list-style: none;
+    //     text-decoration: none;
+    //      color: $color-white;
+    //     font-weight: bold;
+    //     font-size: 1.5em;
+       
+    // }
+
+    // .fbcategory{
+    //     height: 20vh;
+    //     width: 80vw;
+    // }
+
+
+    
+} }
+
+
+
+.navbarlinks {
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+// a:hover {
+
+// background-color: $color-navy;
+
+// }
+
+
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    line-height: 3;
+  
+  
+}
+
+.nav{
+    height: 10vh;
+    background-color: $color-navy;
+    width: 100vw;
+}
+
+.nav-item{
+    list-style: none;
+    text-decoration: none;
+    color: $color-white;
+    font-weight: bold;
+    font-size: 1.0em;
+   
+}
+
+.fbcategory{
+    height: 20vh;
+    width: 80vw;
+}
+
+
+@include breakpoints(phone){
+
+    @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-large-phone)
+    
+    {
+    
+        .nav-item{
+        
+            font-size: .75em;
+            line-height: 1;
+            padding-bottom: 20px;
+        }
+        
+    
+    
+    }
+    }

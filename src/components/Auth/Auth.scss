@@ -1,0 +1,458 @@
+@import '../SCSS/variables.scss';
+
+
+//phone design finished! 
+
+@include breakpoints(phone){
+@media(min-width: $breakpoint-phone) and (max-width: $breakpoint-large-phone){
+
+ 
+
+
+    .employeeEngagement{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: $color-white;
+        color: $color-grey;
+        @include border-theme;
+        width: 100%;
+
+    }
+
+    .smallloginbtn {
+        width: 30%;
+    }
+    .smallregisterbtn{
+        width: 40%;
+    }
+
+    .aboutbtn, .authbtn {
+        width: 15%;
+    }
+
+ 
+    .aboutbtn, .authbtn, .increaseempl{
+
+        height: 10%;
+        margin-bottom: 5px;
+      
+    }
+    
+  
+
+  
+
+    .aboutus{
+                @include about-theme;
+                height: 150vh;
+                width: 95%;
+                font-size: .65rem;  
+            }
+
+            .border{
+                padding: 2%;
+            }
+
+
+
+    
+    .authContainer{
+        display: none;
+        display: flex;
+        background-color: $color-white;
+        align-items: center;
+        justify-content: left;
+        // flex-grow: 2;
+        height: 30%;
+        width: 40%;
+        color: $color-white;
+        font-weight: bold;
+        box-shadow: 4px 4px 4px $color-navy;
+        margin: auto;
+        margin-top: 5%;
+        padding: 5%;
+   
+        }
+        .labelText{
+            color: $color-mauve;
+            font-family: $roboto-slab;
+        }
+
+    
+
+
+    .authInputFieldContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $color-purple;
+        width: 100%;
+       
+       
+    }
+
+
+    .unInput, .authInputFieldContainer, .labelText, .aboutbtn, .authbtn, .increaseempl, .employeeEngagement, .smallregisterbtn, .smallloginbtn{
+        font-size: 0.75rem;
+    }
+
+}
+
+}
+
+
+//tablet design finished!
+@include breakpoints(tablet){
+    @media(min-width: $breakpoint-large-phone) and (max-width: $breakpoint-tablet){
+
+
+        .employeeEngagement{
+            display: flex;
+            flex-direction: column-reverse;
+            background-color: $color-white;
+            color: $color-grey;
+            @include border-theme;
+            width: 100%;
+    
+        }
+    
+        .smallloginbtn {
+            width: 50px;
+        }
+        .smallregisterbtn{
+            width: 65px;
+        }
+    
+        .aboutbtn, .authbtn {
+            width: 60px;
+        }
+    
+     
+        .aboutbtn, .authbtn, .increaseempl{
+    
+            height: 10%;
+            margin-bottom: 5px;
+          
+        }
+        
+      
+    
+      
+    
+        .aboutus{
+                    @include about-theme;
+                    height: 150vh;
+                    width: 95%;
+                    font-size: .65rem;  
+                }
+    
+                .border{
+                    padding: 2%;
+                }
+    
+    
+    
+        
+        .authContainer{
+            display: none;
+            display: flex;
+            background-color: $color-white;
+            align-items: center;
+            justify-content: left;
+            height: 30%;
+            width: 30%;
+            color: $color-white;
+            font-weight: bold;
+            box-shadow: 4px 4px 4px $color-navy;
+            margin: auto;
+            margin-top: 5%;
+            padding: 5%;
+       
+            }
+            .labelText{
+                color: $color-mauve;
+                font-family: $roboto-slab;
+            }
+    
+        
+    
+    
+        .authInputFieldContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $color-purple;
+            width: 100%;
+           
+           
+        }
+    
+    
+        .unInput, .authInputFieldContainer, .labelText, .aboutbtn, .authbtn, .increaseempl, .employeeEngagement, .smallregisterbtn, .smallloginbtn{
+            font-size: 0.85rem;
+        }
+    
+
+
+       
+
+        
+    }
+    
+    }
+
+//laptop design finished!
+    @include breakpoints(laptop){
+        @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop){
+            
+            .authandinfocontainer{
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 80vw;
+                height: 100vh;
+                justify-content: space-between;
+                margin: auto;
+               
+            }
+    
+            .employeeEngagement{
+                display: flex;
+                flex-direction: row;
+                justify-content: center; //was between
+                background-color: $color-white;
+                color: $color-grey;
+                @include border-theme;
+                margin: auto;
+                height: 5vh;
+            }
+
+            
+
+
+            .aboutbtn, .authbtn{
+                @include btn-theme;
+                font-weight: bold;
+            }
+            .smallloginbtn, .smallregisterbtn {
+                width: 40%;
+            }
+
+           
+
+            .aboutus{
+               width: 50vw;
+             
+               
+            }
+
+            .border {
+                padding: 2%;
+            }
+        
+
+            .info {
+
+                display: flex;
+
+                background-color: $color-white;
+                align-items: left;
+                justify-content: space-between;
+                height: 50vh;
+                width: 10vw;
+                color: $color-grey;
+                box-shadow: 4px 4px 4px $color-navy;
+                // margin: auto;
+                margin-top: 2%;
+                padding: 6%;
+                font-weight: bold;
+           
+
+            }
+
+          
+
+            
+
+        
+            .authContainer{
+                display: flex;
+                background-color: $color-white;
+                align-items: center;
+                justify-content: left;
+                // flex-grow: 2;
+                // height: 30vh;
+                // width: 30vh;
+                color: $color-white;
+                font-weight: bold;
+                box-shadow: 4px 4px 4px $color-navy;
+                margin: auto;
+                margin-top: 10%;
+                padding: 6%;
+           
+        
+        
+                }
+    
+                .labelText{
+                    color: $color-mauve;
+                    font-size: 1.0em;
+                    font-family: $roboto-slab;
+                }
+    
+        
+            .authInputFieldContainer{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+
+            .unInput, .authInputFieldContainer, .aboutus, .labelText, .aboutbtn, .authbtn, .increaseempl, .employeeEngagement, .smallregisterbtn, .smallloginbtn{
+                font-size: 0.75rem;
+            }
+        }
+        
+        }
+
+//desktop design finished!
+        @include breakpoints(desktop){
+            @media(min-width: $breakpoint-laptop) and (max-width: $breakpoint-desktop){
+
+
+        
+                .employeeEngagement{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    background-color: $color-white;
+                    color: $color-grey;
+                    @include border-theme;
+                    margin: auto;
+                    height: 15%;
+                    padding: 2%;
+                    font-size: .80rem;
+            
+                }
+
+            
+                .authContainer{
+                    display: flex;
+                    background-color: $color-white;
+                    align-items: center;
+                    justify-content: left;                    
+                    height: 20vh;
+                    width: 20vh;
+                    color: $color-white;
+                    font-weight: bold;
+                    box-shadow: 4px 4px 4px $color-navy;
+                    margin: auto;
+                    margin-top: 5%;
+                    padding: 4%;
+          
+               
+            
+            
+                    }
+
+                    
+                .aboutus{
+                    width: 30%;
+                    font-size: .80rem;
+                }
+
+                .border{
+                    padding: 3%;
+                }
+            
+           
+
+                .labelText{
+                    color: $color-mauve;
+                    font-family: $roboto-slab;
+                    }
+        
+            
+                .authbtn, .aboutbtn {
+                width: 4%;
+                }
+
+               
+
+                .smallloginbtn, .smallregisterbtn {
+                    width: 40%;
+                }
+              
+
+
+                .aboutbtn, .authbtn{
+                    @include btn-theme;
+                }
+
+
+            
+            
+                .authInputFieldContainer{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .unInput, .authInputFieldContainer, .labelText, .aboutbtn, .authbtn, .increaseempl, .smallregisterbtn, .smallloginbtn{
+                    font-size: 0.75rem;
+                }
+                
+            }
+            
+            }
+
+
+            //end of desktop design
+            .body, html{
+                background-color: $color-mauve;
+            } 
+
+            .authbtn, .aboutbtn{
+                font-size: 0.75em;
+            }
+          
+
+            .aboutbtn, .authbtn, .smallloginbtn, .smallregisterbtn{
+                @include btn-theme;
+                font-weight: bold;
+                margin-left: 5%;
+               
+            }
+        
+
+            .aboutus{
+                @include about-theme;
+                height: 100vh;
+               
+               
+            }
+
+            .border {
+                border: 2px solid white;
+                list-style: none; 
+             
+            }
+
+        
+            p{
+                transition: all 1s ease;
+            }
+
+            p:hover{
+                color: $color-navy;
+            }
+
+         
+
+
+            .unInput, .passInput, .deptInput{
+                border: 4px solid $color-mauve;
+            }
+
+            
+

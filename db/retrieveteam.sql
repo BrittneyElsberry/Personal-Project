@@ -1,0 +1,1 @@
+select * from users WHERE dept_number = $1

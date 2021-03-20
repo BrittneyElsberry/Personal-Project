@@ -1,0 +1,1 @@
+select * from department WHERE dept_number = $1;

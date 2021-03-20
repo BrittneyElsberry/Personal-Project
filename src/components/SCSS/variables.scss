@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+$imgpath: 'src/components/MyFeedback/marker.jpeg';
+
+
+
+$roboto-slab: 'Roboto Slab', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
+
+
+
+@mixin btn-theme {
+  box-shadow: 2px 2px 2px 2px $color-mauve;
+  background-color: $color-white;
+  color: $color-grey;
+  border: hidden $color-white;
+
+}
+
+@mixin border-theme{
+  box-shadow: 2px 2px 2px 2px $color-navy;
+  background-color: $color-white;
+  color: $color-grey;
+  padding: 10px;
+ 
+}
+
+@mixin list-style{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // margin-top: 5%;
+  font-size: 0.75rem;
+  height: 50vh;
+  list-style: none;
+
+  overflow-wrap: break-word;
+  overflow: auto;
+
+
+  box-shadow:
+  /* The top layer shadow */
+  0 -1px 1px rgba(0,0,0,0.15),
+  /* The second layer */
+  0 -10px 0 -5px #eee,
+  /* The second layer shadow */
+  0 -10px 1px -4px rgba(0,0,0,0.15),
+   /* The third layer */
+  0 -20px 0 -10px #eee,
+  /* The third layer shadow */
+  0 -20px 1px -9px rgba(0,0,0,0.15);
+  /* Padding for demo purposes */
+  padding: 30px;
+
+}
+
+
+@mixin dropdown{
+  border: 1px 1px solid $color-purple;
+  font-family: $roboto-slab;
+  margin-left: 4vw;
+
+}
+
+
+ @mixin about-theme{
+   background-color: $color-navy;
+   color: $color-white;
+   padding: 3%;
+  //  box-shadow: 2px 2px 2px 2px $color-navy;
+ }
+
+
+
+//Breakpoints
+$breakpoint-phone: 100px;
+$breakpoint-large-phone: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1200px;
+$breakpoint-desktop: 1800px;
+
+
+
+
+
+
+@mixin breakpoints($point){
+
+  @if $point  == phone {
+    @media screen and(max-width: 425px) {@content;}
+  }  @else if $point == large-phone{
+    @media screen and (max-width: 768px) {@content;}
+  }
+  @else if $point == tablet{
+    @media screen and (max-width: 1200px) {@content;}
+  }
+  @else if $point == laptop {
+    @media screen and(max-width: 1800px) {@content;}
+  }
+
+  @else if $point == desktop {
+    @media screen and(max-width: 2500px) {@content;}
+  }
+  // @else if $point == largescreen {
+  //   @media screen and(max-width: 3500px) {@content;}
+  // }
+}
+
+
+// $breakpoint: (
+//   'phone': 360px,
+//   'tablet': 768px,
+//   'desktop': 1366px,
+//   'LGdesktop': 1920px
+// )!default;
+
+
+
+//can nest things in css - reads button in header button
+
+//Colors
+
+$color-light-green:  #02c39a;
+$color-dark-green: #00a896;
+
+$color-light-blue: #028090;
+$color-dark-blue: #05668d;
+
+$color-creme: #f0f3bd;
+$color-grey: #8b8c89;
+$color-white: #f8f9fa;
+
+//new palette
+
+$color-purple: #5e60ce;
+$color-blue: #5390d9;
+$color-green: #64dfdf;
+
+
+//new palette
+
+$color-navy: #4a4e69;
+$color-mauve: #9a8c98;
+
+  /*Color palette
+
+  //new palette
+
+  
+  
+
+  GREEN BLUE PALETTE
+  darkest blue #05668d
+  darker blue #028090
+  darker green #00a896
+  lighter green #02c39a
+  creme #f0f3bd
+  grey #8b8c89
+  
+  */
+
+  $font-stack: Roboto;
+
+

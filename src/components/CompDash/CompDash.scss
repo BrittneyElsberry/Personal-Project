@@ -1,0 +1,25 @@
+@import '../SCSS/variables.scss';
+
+
+
+
+.compDashContainer{
+background: url('business-results.jpg') no-repeat center center fixed;
+      
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.fiscalYearContainer{
+  font-size: 1.0em;
+  @include border-theme;
+  width: 20%;
+  height: 20%;
+  margin-bottom: 10%;
+
+}
