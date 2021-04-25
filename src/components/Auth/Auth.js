@@ -3,6 +3,9 @@ import axios from 'axios'
 import './Auth.scss';
 import {connect} from 'react-redux'
 import {updateUser} from '../../redux/authReducer'
+import {GiHamburgerMenu} from 'react-icons/gi'
+import {TiDeleteOutline} from 'react-icons/ti'
+import styled from 'styled-components'
 // import VisibilityToggler from './VisibilityToggler' //will implement later
 // import {useHistory} from 'react-router-dom'
 
@@ -20,6 +23,7 @@ const [user_admin, setuser_admin] = useState(false)
 const [toggleLogin, setToggleLogin] = useState(false)
 const [toggleRegister, setToggleRegister] = useState(false)
 const [about, setAbout] = useState (false)
+const [hambtn, setHamBtn] = useState(false)
 
 
 
@@ -45,6 +49,11 @@ const [about, setAbout] = useState (false)
 
     }
 
+    const displaySlidingMenu = ()=> {
+            setHamBtn(!hambtn)
+
+    }
+
 
     const displayLoginForm = ()=> {
     setToggleLogin(true)
@@ -66,39 +75,73 @@ const [about, setAbout] = useState (false)
         setToggleRegister(false)
         setToggleLogin(false)
       
-    }    
+    }  
+    
+    
+
 
 
     return (
 
 
 
-    <div className='backgroundAuth'>
+        <div className='backgroundAuth'>
+        { hambtn ? (
+
+                <SlidingMenu>
+
+                    <div className='sliding-menu-container'>
+
+
+                   
+                    <button className='icon-btn'
+                            onClick={displaySlidingMenu}>
+                    <TiDeleteOutline size={28}/>
+                    </button>
+
+                    <button className='aboutbtn' 
+                            onClick={(e)=>displayAbout(e)}>
+                    About
+                    </button>
+       
+                     <button
+                    className='authbtn'
+                    onClick={(e)=>displayLoginForm(e)}
+                    
+                    >Login</button>
+
+                    <button
+                    className='authbtn'
+                    onClick={(e)=>displayRegisterForm(e)}
+                    
+                    >Register</button>
+                    </div>
+                   </SlidingMenu>
+
+
+        ) : null
+
+
+
+
+        }
 
                     <div className='employeeEngagement'>
                     <p className='increaseempl'>Increase employee engagement with the Feedback Hub! <br></br>
                         </p>
-                    <button className='aboutbtn' onClick={(e)=>displayAbout(e)}>About</button>
-                       
+
                     
-                            {/* <button className='aboutbtn' onClick={(e)=>displayAbout(e)}>About</button> */}
+                            <button className='icon-btn'
+                                    onClick={displaySlidingMenu}
+                                    
+                                    ><GiHamburgerMenu size={28}/></button> 
 
-                                {/* <div className='flexauthbtn'> */}
-                                     <button
-                                    className='authbtn'
-                                    onClick={(e)=>displayLoginForm(e)}
 
-                                    >Login</button>
-
-                                    <button
-                                    className='authbtn'
-                                    onClick={(e)=>displayRegisterForm(e)}
-
-                                    >Register</button>
-
-                                {/* </div> */}
                                 
                     </div>
+
+
+                   
 
 
         
@@ -303,3 +346,20 @@ const [about, setAbout] = useState (false)
 }
 
 export default connect (null, {updateUser})(Auth)
+//transition: transform 0.25s ease-out;
+//box-sizing: border-box;
+//transform: translateX(-45%);
+
+const SlidingMenu = styled.div 
+`
+box-sizing: border-box;
+position: absolute;
+background-color: #4a4e69;
+width: 50vw;
+height:100vh;
+overflow: hidden;
+
+
+transition: transform 1s ease-in-out;
+
+`

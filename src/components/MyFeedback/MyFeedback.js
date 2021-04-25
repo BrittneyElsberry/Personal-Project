@@ -8,6 +8,7 @@ import {Redirect} from 'react-router-dom'
 import Edit from '../Edit/Edit'
 import {useParams} from 'react-router-dom'
 
+
 const MyFeedback = (props)=>{
 
 
@@ -133,7 +134,7 @@ return(
         <form onSubmit={submitFB}>
 
     
-    <div className='fbcategory'>
+    <form className='fbcategory'>
     <select className='dropDownMenu' value={fbInfo.selectCategory} onChange={(e)=> setfbInfo({...fbInfo, selectCategory: e.target.value})} >
         <option value='default'>Select Feedback Category</option>
         <option value='Customer Experience'>Customer Experience</option>
@@ -151,7 +152,7 @@ return(
     value={fbInfo.fb} 
     onChange={(e)=> setfbInfo({...fbInfo, fb: e.target.value})}>
     </textarea> 
-    </div>  
+    </form>  
 
     <div className='anonheaderContainer'>
     <div className='anonheader'>

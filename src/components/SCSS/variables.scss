@@ -14,15 +14,15 @@ $ubuntu: 'Ubuntu', sans-serif;
 
 
 @mixin btn-theme {
-  box-shadow: 2px 2px 2px 2px $color-mauve;
+  // box-shadow: 2px 2px 2px 2px $color-mauve;
   background-color: $color-white;
-  color: $color-grey;
+  color: $color-navy;
   border: hidden $color-white;
 
 }
 
 @mixin border-theme{
-  box-shadow: 2px 2px 2px 2px $color-navy;
+ 
   background-color: $color-white;
   color: $color-grey;
   padding: 10px;
