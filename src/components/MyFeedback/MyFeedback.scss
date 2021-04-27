@@ -558,58 +558,46 @@ font-size: .75rem;
         
         }
 
-        .fbcategory, .anonheaderContainer{
-            width: 50%;
-            margin-top: 5%;
-        }
-        // .fbcategory{
-        //     display: flex;
-        //     flex-direction: row;
-        // }
-
+    
+    
         .dropDownMenu{
-            font-family: $roboto-slab;
-            // width: 40%;
-            height: 5vh;   
+            @include dropdown;
+            height: 20%;
+            width: 80%;
         }
 
-        .dropDownMenu, .anonheaderContainer, .myTextArea{
-          margin-left: 20%;
-          
-        }
+    
  
         .myTextArea{
             height: 50%;
-            align-items: center;
-            margin-top: 1px;
+         
         }
 
-        // .myTextArea, .anonheaderContainer{
-        //     width: 50%;
-        // }
-    
+     
      
     
-        .mySubmitbtn, .anonheader{
+        .mySubmitbtn, .anonheader, .dropDownMenu, .myTextArea{
             @include btn-theme;
             padding: 5px;
+        
+            margin-top: 4%;
+           
             
          
         }
-    
-        .anonheader{
-            margin-right: 2px;
+
+        .mySubmitbtn, .myTextArea{
+            border-radius: 5%;
         }
     
-        .anonheaderContainer {
-          
-            margin-top: 1%;  
-            display: flex;
-            flex-direction: row;
+        .mySubmitbtn{
+            margin-bottom: 25%;
         }
+      
+    
     
         .checkbox{
-                padding-right: 10px;
+                padding-right: 5px;
         }
     
      
@@ -623,6 +611,8 @@ font-size: .75rem;
             width: 80%;
             margin-bottom: 5%;
             padding: 2%;
+            font-size: 1.0rem;
+            border-radius: 5%;
             
 }
         
@@ -636,7 +626,20 @@ font-size: .75rem;
 
 
             .catName, li.liststyle, .dropDownMenu, .anonheader, .mySubmitbtn, .myTextArea{
-                font-size: 0.5rem;
+                font-size: 1.20rem;
+            }
+
+            .myFeedbackContainer{
+              
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                width: 80%;
+            }
+
+            .anonheader{
+                width: 76%;
             }
             
 

@@ -5,6 +5,9 @@ import {updateUser} from '../../redux/authReducer'
 import {connect} from 'react-redux'
 import './Edit.scss'
 import axios from 'axios'
+import {AiFillDelete} from 'react-icons/ai'
+import {AiFillEdit} from 'react-icons/ai'
+import {AiFillSave} from 'react-icons/ai'
 
 
 class Edit extends Component {
@@ -121,7 +124,7 @@ console.log(this.state.savedComment, 'this is this.state.savedComment.feedback_i
                     console.log(this.props.feedback_id, 'this is what is passed to the controller function')
 
                 }}>
-                SAVE</button>
+                <AiFillSave/> </button>
             </li>
 
 
@@ -173,8 +176,8 @@ console.log(this.state.savedComment, 'this is this.state.savedComment.feedback_i
 
           <div className='btnContainer'>
           
-             <button className="btn" id='fblabels' onClick={()=>this.props.deleteFeedback(this.props.feedback_id)}>Delete</button>
-             <button className="btn" onClick={()=>this.toggleEditMode()}>Edit</button>
+             <button className="btn" id='fblabels' onClick={()=>this.props.deleteFeedback(this.props.feedback_id)}><AiFillDelete/></button>
+             <button className="btn" onClick={()=>this.toggleEditMode()}><AiFillEdit/> </button>
              </div>
         
         ) }

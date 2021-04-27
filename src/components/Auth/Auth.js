@@ -4,8 +4,10 @@ import './Auth.scss';
 import {connect} from 'react-redux'
 import {updateUser} from '../../redux/authReducer'
 import {GiHamburgerMenu} from 'react-icons/gi'
-import {TiDeleteOutline} from 'react-icons/ti'
+import {TiDelete} from 'react-icons/ti'
+import {FiPhoneCall} from 'react-icons/fi'
 import styled from 'styled-components'
+
 // import VisibilityToggler from './VisibilityToggler' //will implement later
 // import {useHistory} from 'react-router-dom'
 
@@ -19,11 +21,12 @@ const [userInfo, setUserInfo] = useState({
   
 })    
 
-const [user_admin, setuser_admin] = useState(false)
-const [toggleLogin, setToggleLogin] = useState(false)
-const [toggleRegister, setToggleRegister] = useState(false)
-const [about, setAbout] = useState (false)
-const [hambtn, setHamBtn] = useState(false)
+const [user_admin, setuser_admin] = useState(false);
+const [toggleLogin, setToggleLogin] = useState(false);
+const [toggleRegister, setToggleRegister] = useState(false);
+const [toggleContactUs, setToggleContactUs] = useState(false);
+const [about, setAbout] = useState (false);
+const [hambtn, setHamBtn] = useState(false);
 
 
 
@@ -56,29 +59,43 @@ const [hambtn, setHamBtn] = useState(false)
 
 
     const displayLoginForm = ()=> {
-    setToggleLogin(true)
-    setToggleRegister(false)
-    setAbout(false)
-    }
+        setToggleLogin(true)
+        setHamBtn(!hambtn)
+        setToggleRegister(false)
+        setAbout(false)
+        setToggleContactUs(false)
+        }
 
 
     const displayRegisterForm = ()=> {
         setToggleRegister(true)
+        setHamBtn(!hambtn)
         setToggleLogin(false)
         setAbout(false)
+        setToggleContactUs(false)
 
         }
         
     
     const displayAbout = () => {
         setAbout(!about)
+        setHamBtn(!hambtn)
         setToggleRegister(false)
         setToggleLogin(false)
+        setToggleContactUs(false)
       
     }  
-    
-    
 
+    const displayContactUs =()=>{
+        setToggleContactUs(!toggleContactUs)
+        setAbout(false)
+        setHamBtn(!hambtn)
+        setToggleRegister(false)
+        setToggleLogin(false)
+    }
+    
+    
+    // const phoneIcon = styled()
 
 
     return (
@@ -86,19 +103,16 @@ const [hambtn, setHamBtn] = useState(false)
 
 
         <div className='backgroundAuth'>
-        { hambtn ? (
-
-                <SlidingMenu>
-
-                    <div className='sliding-menu-container'>
+            <div className={hambtn ? 'sliding-menu-container-active' : 'sliding-menu-container'}>
 
 
-                   
-                    <button className='icon-btn'
+                    <button className={hambtn ? 'icon-btn-x' : 'icon-btn-none'}
                             onClick={displaySlidingMenu}>
-                    <TiDeleteOutline size={28}/>
+                    <TiDelete size={28} margin={0} />            
                     </button>
 
+
+                   <div className='menu-btn-container'>
                     <button className='aboutbtn' 
                             onClick={(e)=>displayAbout(e)}>
                     About
@@ -115,23 +129,26 @@ const [hambtn, setHamBtn] = useState(false)
                     onClick={(e)=>displayRegisterForm(e)}
                     
                     >Register</button>
+
+
+                    <button
+                    className='authbtn'
+                    onClick={(e)=>displayContactUs(e)}
+                    
+                    >Contact Us</button>    
+
                     </div>
-                   </SlidingMenu>
+                    </div>
+                
 
-
-        ) : null
-
-
-
-
-        }
+     
 
                     <div className='employeeEngagement'>
                     <p className='increaseempl'>Increase employee engagement with the Feedback Hub! <br></br>
                         </p>
 
                     
-                            <button className='icon-btn'
+                                    <button className='icon-btn'
                                     onClick={displaySlidingMenu}
                                     
                                     ><GiHamburgerMenu size={28}/></button> 
@@ -194,6 +211,7 @@ const [hambtn, setHamBtn] = useState(false)
 
                         { toggleLogin ? (
 
+                                
                                 <div className='authContainer'>
                                 <div className='authInputFieldContainer'>
                                 <p className='labelText'>Username:</p><br></br> 
@@ -220,7 +238,9 @@ const [hambtn, setHamBtn] = useState(false)
                                         )
                                         
                         }
+
                                         />
+
                         
                                        
                         <br></br>
@@ -322,15 +342,32 @@ const [hambtn, setHamBtn] = useState(false)
 
                                 }
 
-
-                                   
-
-               
-
-                          
-
-
         </div>
+                                {
+                                    toggleContactUs ? 
+                                    
+                                    <StyledForm>
+                                        <div className='authContainer'>
+                                            <div className='box'>
+
+                                        {/* <img src="https://img.icons8.com/windows/32/000000/phone-disconnected--v1.png"/>  */}
+                                                <FiPhoneCall/>
+                                                <p className='p-font'>1800-765-2233</p>
+                                            </div>
+
+                                            <div className='box'>
+                                       {/* <img className='icons' src="https://img.icons8.com/ios-filled/26/000000/email.png"/> */}
+                                       {/* <a href="https://icons8.com/icon/8126/email">Email icon by Icons8</a> */}
+                                       <p className='p-font'>email@email.com</p>
+                                     
+                                    </div>
+                                        </div>
+                                    
+
+                                    </StyledForm>
+                                    
+                                    : null 
+                                }
 
 
                    
@@ -346,20 +383,55 @@ const [hambtn, setHamBtn] = useState(false)
 }
 
 export default connect (null, {updateUser})(Auth)
-//transition: transform 0.25s ease-out;
-//box-sizing: border-box;
-//transform: translateX(-45%);
-
-const SlidingMenu = styled.div 
-`
-box-sizing: border-box;
-position: absolute;
-background-color: #4a4e69;
-width: 50vw;
-height:100vh;
-overflow: hidden;
 
 
-transition: transform 1s ease-in-out;
+
+const StyledForm = styled.div `
+
+.authContainer{
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    z-index: 1;
+    width: 80%;
+    height: 40vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.p-font{
+    font-size: 1.0rem;
+    color: #4a4e69;
+    font-family: Roboto Slab, sans-serif;
+}
+
+.input{
+    border-radius: 5px;
+    border: 2px yellow solid;
+}
+
+.icons{
+    size: 18px;
+    background-color: purple;
+    height: 60px;
+    width: 100px;
+}
+
+
+@media screen (min-width: 100px) and (max-width: 425px){
+width: 50%;
+
+}
+
+
 
 `

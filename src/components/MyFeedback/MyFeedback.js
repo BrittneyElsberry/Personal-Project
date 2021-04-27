@@ -154,7 +154,7 @@ return(
     </textarea> 
     </form>  
 
-    <div className='anonheaderContainer'>
+    <div className='anonheaderCont'>
     <div className='anonheader'>
     <label>Submit Anonymously?</label>
    

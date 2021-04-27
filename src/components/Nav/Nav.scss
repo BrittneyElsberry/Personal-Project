@@ -125,11 +125,16 @@ a{
     
         .nav-item{
         
-            font-size: .75em;
+            font-size: 1.0rem;
             line-height: 1;
-            padding-bottom: 20px;
+            // padding-bottom: 20px;
         }
         
+
+        .ham-nav-btn{
+            background-color: $color-navy;
+            border: none;
+        }
     
     
     }

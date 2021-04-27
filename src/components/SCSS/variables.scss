@@ -17,8 +17,48 @@ $ubuntu: 'Ubuntu', sans-serif;
   // box-shadow: 2px 2px 2px 2px $color-mauve;
   background-color: $color-white;
   color: $color-navy;
-  border: hidden $color-white;
+  border: hidden;
+  font-family: $roboto-slab;
 
+}
+
+
+@mixin sliding-menu-cont {
+  display: flex;
+  flex-direction: column;
+  height: 110vh;
+  width: 80vw;
+  left: -100%;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #4a4e69;
+  opacity: 2;
+  overflow: hidden;
+}
+
+@mixin sliding-menu-cont-active {
+  display: flex;
+  flex-direction: column;
+  height: 150vh;
+  left: -100%;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #4a4e69;
+  opacity: 2;
+  overflow: hidden;
+  left: 0;
+  transition: 0.5s;
+}
+
+
+@mixin menu-btn-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 110vh;
+  margin-top: 10%;
+  font-family: $roboto-slab;
+  // padding: 2%;
 }
 
 @mixin border-theme{
@@ -62,7 +102,9 @@ $ubuntu: 'Ubuntu', sans-serif;
 @mixin dropdown{
   border: 1px 1px solid $color-purple;
   font-family: $roboto-slab;
-  margin-left: 4vw;
+  
+
+ 
 
 }
 
