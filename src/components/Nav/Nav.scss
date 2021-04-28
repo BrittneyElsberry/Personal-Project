@@ -33,8 +33,14 @@
 
         .nav-item{
         
-            font-size: 1.0em;
-            line-height: 1;
+            font-size: 0.70rem;
+            // line-height: 1;
+            // padding: 25%;
+            margin-left: 60%;
+            border: 2px solid black;
+            font-weight: bold;
+            font-family: $roboto-slab;
+            // background-color: aquamarine;
         }
         
 
