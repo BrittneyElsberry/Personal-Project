@@ -1,7 +1,7 @@
 @import '../SCSS/variables.scss';
 
 
-//phone design finished
+
 
 @include breakpoints(phone){
 @media(min-width: $breakpoint-phone) and (max-width: $breakpoint-large-phone){
@@ -68,19 +68,15 @@
 
     
     .authContainer{
-        display: none;
-        display: flex;
-        background-color: $color-white;
-        align-items: center;
-        justify-content: left;
+        @include auth-cont;
+     
         height: 50%;
         width: 60%;
-        color: $color-white;
-        font-weight: bold;
-        margin: auto;
-        margin-top: 25%;
+      
+        margin-top: 35% !important;
         padding: 5%;
-        border-radius: 5%;
+    
+
    
         }
         .labelText{
@@ -95,7 +91,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // color: $color-purple;
         width: 100%;
         font-size: 0.7rem;
        
@@ -109,13 +104,11 @@
   
 
     .authInputFieldContainer, .labelText, .aboutbtn, .authbtn, .increaseempl, .employeeEngagement, .smallregisterbtn, .smallloginbtn{
-        font-size: 1.25rem; /*used to be .75rem*/
+        font-size: 1.25rem; 
     }
 
     .increaseempl{
-        color: $color-navy;
-        font-weight: bold;
-        line-height: normal;
+        padding: 3% !important;
     }
 
 
@@ -129,17 +122,7 @@
     @media(min-width: $breakpoint-large-phone) and (max-width: $breakpoint-tablet){
 
 
-        .employeeEngagement{
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: flex-start;
-            background-color: $color-white;
-            color: $color-grey;
-            @include border-theme;
-            width: 100%;
-    
-        }
-
+      
         .increaseempl{
             padding: 3%;
             font-size: 1.25rem !important; 
@@ -160,21 +143,13 @@
             display: none;
         }
 
-        // .sliding-menu-container{
-        //     @include sliding-menu-cont;
-        // }
     
-        // .sliding-menu-container-active{
-        //     @include sliding-menu-cont-active;
-        //     width: 40%;
-        // }
 
         .sliding-menu-container-active{
             width: 40%;
         }
 
         .menu-btn-container{
-            @include menu-btn-cont;
             height: 100vh;
             margin-top: 10%;
             width: 100vw;
@@ -183,39 +158,7 @@
          
         }
 
-            /*
-            
-
-
-    .sliding-menu-container-active{
-
-     
-        width: 80vw;
-        left: -100%;
-        box-sizing: border-box;
-        position: absolute;
-        background-color: #4a4e69;
-        opacity: 2;
-        overflow: hidden;
-        left: 0;
-        transition: 0.5s;
-    }
-
-    .menu-btn-container{
-        // padding: 10%;
-        height: 100vh;
-        margin-top: 10%;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 10%;
-     
-    }
-
-            
-            
-            */
+    
 
 
 
@@ -262,19 +205,15 @@
     
         
         .authContainer{
-            display: none;
-            display: flex;
-            background-color: $color-white;
-            align-items: center;
-            justify-content: left;
+       
+            @include auth-cont;
             height: 30%;
             width: 30%;
-            color: $color-white;
-            font-weight: bold;
-            box-shadow: 4px 4px 4px $color-navy;
+          
             margin: auto;
-            margin-top: 5%;
+            margin-top: 50%;
             padding: 5%;
+
        
             }
             .labelText{
@@ -309,7 +248,7 @@
     
     }
 
-//laptop design finished!
+
     @include breakpoints(laptop){
         @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop){
             
@@ -329,18 +268,19 @@
                 width: 20%;
             }
 
+            .increaseempl{
+                padding: 1.5%;
+                
+            }
+
+            .icon-btn{
+                border: none;
+                background-color: $color-mauve;
+                margin-top: 2%;
+                width:15%;
+            }
     
 
-            .employeeEngagement{
-                display: flex;
-                flex-direction: column-reverse;
-                justify-content: flex-start;
-                background-color: $color-white;
-                color: $color-grey;
-                width: 100%;
-                font-size: 1.50rem;
-        
-            }
 
             .sliding-menu-container-active{
                 @include sliding-menu-cont-active;
@@ -354,7 +294,7 @@
                 @include btn-theme;
                 font-weight: bold;
                 border: none;
-                // width: 50%;
+               
         
             }
 
@@ -376,41 +316,10 @@
             }
         
 
-            .info {
-
-                display: flex;
-
-                background-color: $color-white;
-                align-items: left;
-                justify-content: space-between;
-                height: 50vh;
-                width: 10vw;
-                color: $color-grey;
-                box-shadow: 4px 4px 4px $color-navy;
-                // margin: auto;
-                margin-top: 2%;
-                padding: 6%;
-                font-weight: bold;
-           
-
-            }
-
+      
           
-
-            
-
-        
             .authContainer{
-                display: flex;
-                background-color: $color-white;
-                align-items: center;
-                justify-content: left;
-                // flex-grow: 2;
-                // height: 30vh;
-                // width: 30vh;
-                color: $color-white;
-                font-weight: bold;
-                box-shadow: 4px 4px 4px $color-navy;
+              
                 margin: auto;
                 margin-top: 10%;
                 padding: 6%;
@@ -460,6 +369,10 @@
             
                 }
 
+                .increaseempl{
+                    padding: 1%;
+                }
+
                 .sliding-menu-container-active{
         
                     width: 20%;
@@ -467,19 +380,19 @@
 
             
                 .authContainer{
-                    display: flex;
-                    background-color: $color-white;
+                    // display: flex;
+                    // background-color: $color-white;
                     align-items: center;
-                    justify-content: left;                    
+                    // justify-content: left;                    
                     height: 20vh;
                     width: 20vh;
                     color: $color-white;
-                    font-weight: bold;
-                    box-shadow: 4px 4px 4px $color-navy;
+                    // font-weight: bold;
+                    // box-shadow: 4px 4px 4px $color-navy;
                     margin: auto;
                     margin-top: 5%;
                     padding: 4%;
-          
+                    // @include auth-cont;
                
             
             
@@ -548,6 +461,14 @@
                 background-color: $color-mauve;
             } 
 
+
+
+            .authContainer{
+                @include auth-cont;                
+                color: $color-white;
+                }
+
+
             .authbtn, .aboutbtn{
                 background-color: $color-navy !important;
                 color: $color-white !important;
@@ -604,6 +525,9 @@
                 font-size: 1.0rem;
         
             }
+
+
+    
         
             .icon-btn{
                 border: none;
@@ -635,8 +559,8 @@
                @include menu-btn-cont;
             }
             .increaseempl{
-                padding: 3%;
-                font-family: $roboto-slab;
+               
+               @include employee-engagement;
             }
             
 

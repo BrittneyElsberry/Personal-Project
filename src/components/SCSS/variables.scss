@@ -22,6 +22,27 @@ $ubuntu: 'Ubuntu', sans-serif;
 
 }
 
+@mixin auth-cont{
+
+  border-radius: 5%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 4%;
+  display: flex;
+  background-color: $color-white;
+  align-items: center;
+  justify-content: left;    
+  font-weight: bold;
+               
+
+}
+
+@mixin employee-engagement {
+  font-family: $roboto-slab;
+  color: $color-navy;
+  font-weight: bold;
+}
+
 
 @mixin sliding-menu-cont {
   display: flex;
