@@ -7,6 +7,29 @@
 @media(min-width: $breakpoint-phone) and (max-width: $breakpoint-large-phone){
 
 
+
+    .backgroundAuth{
+        // position: relative; 
+         background: url('david-becker-resized-unsplash.jpg') no-repeat center center fixed !important;
+         background-size: contain;
+         background-repeat: no-repeat;
+         height: 200vh;
+
+        // &::before {
+        //     content: '';
+        //     // background-position: 0 0;
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        //     position: absolute;
+        //     top: 0px;
+        //     right: 0px;
+        //     bottom: 0px;
+        //     left: 0px;
+        //     opacity: 0.25;
+        //     z-index: -4;
+        // }
+        
+    }
   
 
     .sliding-menu-container-active{
@@ -104,7 +127,7 @@
   
 
     .authInputFieldContainer, .labelText, .aboutbtn, .authbtn, .increaseempl, .employeeEngagement, .smallregisterbtn, .smallloginbtn{
-        font-size: 1.25rem; 
+        font-size: 1.0rem !important; 
     }
 
     .increaseempl{
@@ -121,6 +144,15 @@
 @include breakpoints(tablet){
     @media(min-width: $breakpoint-large-phone) and (max-width: $breakpoint-tablet){
 
+        
+        .backgroundAuth{
+         
+             background: url('david-becker-55Sp4WZmJbQ-unsplash.jpg') no-repeat center center fixed !important;
+             background-size: contain;
+             background-repeat: no-repeat;
+             height: 200vh;    
+        }
+      
 
       
         .increaseempl{
@@ -146,17 +178,18 @@
     
 
         .sliding-menu-container-active{
-            width: 40%;
+            width: 20%;
         }
 
-        .menu-btn-container{
-            height: 100vh;
-            margin-top: 10%;
-            width: 100vw;
+        // .menu-btn-cont{
+        //     margin-top: 10%;
+        //     width: 100vw;
+        //     border: 2px solid black;
+        //     align-items: center;
             
-           
+        //    @include menu-btn-cont
          
-        }
+        // }
 
     
 
@@ -251,6 +284,17 @@
 
     @include breakpoints(laptop){
         @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop){
+
+            .backgroundAuth{
+            
+                 background: url('david-becker-resized-unsplash.jpg') no-repeat center center fixed !important;
+                 background-size: contain;
+                 background-repeat: no-repeat;
+                 height: 200vh;
+        
+                
+            }
+          
             
             .authandinfocontainer{
                 display:flex;
@@ -353,6 +397,19 @@
         @include breakpoints(desktop){
             @media(min-width: $breakpoint-laptop) and (max-width: $breakpoint-desktop){
 
+
+                .backgroundAuth{
+                   
+                     background: url('david-becker-55Sp4WZmJbQ-unsplash.jpg') no-repeat center center fixed !important;
+                     background-size: contain;
+                     background-repeat: no-repeat;
+                     height: 200vh;
+                     width: 150vw;
+            
+            
+                    
+                }
+              
 
         
                 .employeeEngagement{
@@ -517,12 +574,15 @@
 
             .employeeEngagement{
                 display: flex;
+                // position: fixed !important;
+                // position: relative !important;
                 flex-direction: column-reverse;
                 justify-content: flex-start;
                 background-color: $color-white;
                 color: $color-grey;
                 width: 100%;
                 font-size: 1.0rem;
+                z-index: 1000;
         
             }
 
@@ -561,6 +621,27 @@
             .increaseempl{
                
                @include employee-engagement;
+            }
+
+            .backgroundAuth{
+                position: relative; 
+                 background: url('david-becker-resized-unsplash.jpg') no-repeat center center fixed !important;
+                 background-size: auto;
+
+                // &::before {
+                //     content: '';
+                //     // background-position: 0 0;
+                //     background-repeat: no-repeat;
+                //     background-size: cover;
+                //     position: absolute;
+                //     top: 0px;
+                //     right: 0px;
+                //     bottom: 0px;
+                //     left: 0px;
+                //     opacity: 0.25;
+                //     z-index: -4;
+                // }
+                
             }
             
 

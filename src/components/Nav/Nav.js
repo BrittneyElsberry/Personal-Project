@@ -68,7 +68,7 @@ const Nav = (props)=> {
                     onClick={displaySlidingMenu}
             
             >
-            <GiHamburgerMenu color='white' size={28}/> 
+            <GiHamburgerMenu color='white' size={28} className='nav-ham-btn'/> 
             </button>
 
             

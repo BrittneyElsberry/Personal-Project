@@ -542,23 +542,6 @@ color: $color-grey !important;
             overflow: scroll;
             position: relative;
           
-            &::before {
-                content: '';
-                background: url('marker.jpeg') no-repeat center center fixed;
-                
-                background-repeat: no-repeat;
-                background-size: cover;
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                bottom: 0px;
-                left: 0px;
-                opacity: 0.25;
-                z-index: -4;
-            }
-
-           
-        
         }
 
     
@@ -573,6 +556,7 @@ color: $color-grey !important;
  
         .myTextArea{
             height: 50%;
+            width: 72vw;
          
         }
 
@@ -592,6 +576,10 @@ color: $color-grey !important;
         .mySubmitbtn, .myTextArea{
             border-radius: 5%;
         }
+
+        .checkbox{
+            margin-left: 5px;
+        }
     
         .mySubmitbtn{
             margin-bottom: 25%;
@@ -599,9 +587,9 @@ color: $color-grey !important;
       
     
     
-        .checkbox{
-                padding-right: 5px;
-        }
+        // .checkbox{
+        //         padding-right: 5px;
+        // }
     
      
       
@@ -629,7 +617,7 @@ color: $color-grey !important;
 
 
             .catName, li.liststyle, .dropDownMenu, .anonheader, .mySubmitbtn, .myTextArea{
-                font-size: 1.20rem;
+                font-size: 0.90rem;
             }
 
             .myFeedbackContainer{
@@ -637,12 +625,23 @@ color: $color-grey !important;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
-
                 width: 80%;
             }
 
             .anonheader{
-                width: 76%;
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                
+            }
+
+
+            .dropDownMenu{
+                font-size: 0.90rem !important;
+                font-family: $roboto-slab;
+                height: 5vh;
+                width: 75vw !important;
             }
             
 

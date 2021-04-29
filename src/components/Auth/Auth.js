@@ -104,6 +104,7 @@ const [hambtn, setHamBtn] = useState(false);
 
         <div className='backgroundAuth'>
             <div className={hambtn ? 'sliding-menu-container-active' : 'sliding-menu-container'}>
+       
 
 
                     <button className={hambtn ? 'icon-btn-x' : 'icon-btn-none'}
@@ -157,7 +158,7 @@ const [hambtn, setHamBtn] = useState(false);
                                 
                     </div>
 
-
+                    {/* <img src='david-becker-55Sp4WZmJbQ-unsplash.jpg' height='600px' width='600px' /> */}
                    
 
 
