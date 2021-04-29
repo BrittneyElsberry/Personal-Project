@@ -76,7 +76,7 @@ const submitFB =(formSubmit)=>{
         Please make sure your feedback is specific and actionable. 
         There will be no way for leadership to ask follow up questions. 
     
-        If you\'d like to add more detail, please click cancel
+        If you'd like to add more detail, please click cancel
         and add more information. Thank you! :)`)
         if (result === true){
             axios.post('/myfeedback/anonymous', fbInfo)

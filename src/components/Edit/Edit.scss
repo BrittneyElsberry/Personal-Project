@@ -44,8 +44,17 @@
         }
 
         .commentContainer{
-            font-size: 1.20rem;
+            font-size: 0.90rem;
             // font-size: 0.75rem;
+        }
+        
+        .comment{
+            list-style: none;
+
+        }
+
+        .comment-icon{
+            width: 28px;
         }
     }}
 

@@ -31,7 +31,7 @@ const DeptDash = (props)=>{
         .then( res=> {
             
         setCategory1(res.data)
-        console.log(res.data, 'this is category_id 1 data')
+   
         })
         .catch(err=> console.log(err))
 
@@ -40,7 +40,7 @@ const DeptDash = (props)=>{
         .then( res=> {
             
         setCategory2(res.data)
-        console.log(res.data, 'this is category_id 2 data')
+  
         })
         .catch(err=> console.log(err))
 
@@ -49,7 +49,7 @@ const DeptDash = (props)=>{
         .then( res=> {
             
         setCategory3(res.data)
-        console.log(res.data, 'this is category_id 3 data')
+     
         })
         .catch(err=> console.log(err))
 
@@ -58,7 +58,7 @@ const DeptDash = (props)=>{
         .then( res=> {
             
         setCategory4(res.data)
-        console.log(res.data, 'this is category_id 4 data')
+  
         })
         .catch(err=> console.log(err))
       
@@ -68,7 +68,7 @@ const DeptDash = (props)=>{
         .then( res=> {
             
         setComment1(res.data)
-        console.log(res.data, 'this is comment1 data. YOU WORKING OR WHAT?')
+    
         })
         .catch(err=> console.log(err))
 
@@ -76,7 +76,7 @@ const DeptDash = (props)=>{
         .then( res=> {
             
         setComment2(res.data)
-        console.log(res.data, 'this is comment2 data. YOU WORKING OR WHAT?')
+     
         })
         .catch(err=> console.log(err))
 
@@ -84,7 +84,7 @@ const DeptDash = (props)=>{
         .then( res=> {
             
         setComment3(res.data)
-        console.log(res.data, 'this is comment3 data. YOU WORKING OR WHAT?')
+     
         })
         .catch(err=> console.log(err))
 
@@ -92,7 +92,7 @@ const DeptDash = (props)=>{
         .then( res=> {
             
         setComment4(res.data)
-        console.log(res.data, 'this is comment4 data. YOU WORKING OR WHAT?')
+
         })
         .catch(err=> console.log(err))
     
@@ -103,29 +103,46 @@ const DeptDash = (props)=>{
 
 
 
-    console.log(category1, 'is the data correct in state?')
+  
 
 return(
 
     <div className='deptDashContainer'>
   
     <div className='fiscalYearContainer'>
-    <h2 className='fiscalYear'>Fiscal Year 2021</h2>
-    <br></br>
-    <select className='qtrContainer'>
-    <option>Q1</option>
-    <option>Q2</option>
-    <option>Q3</option>
-    <option>Q4</option>
-
+        <div className='fiscal-year'>
+        <h1>Fiscal Year</h1>
+    <select className='fy-dropdown' placeholder='Fiscal Year'>
+        <option value='2021'>2021</option>
+        <option value='2020'>2020</option>
+        <option value='2019'>2019</option>
+        <option value='2018'>2018</option>
+        <option value='2017'>2017</option>
+        <option value='2016'>2016</option>
+        <option value='2015'>2015</option>
+        <option value='2014'>2014</option>
+    
+    
     </select>
     </div>
 
-    <div className='chart'>
-       {/* <Bar height={'30%'}
-           width={'30%'}  */}
+    <div className='fiscal-qtr'>
+    <h1>Fiscal Quarter</h1>
+    <select className='qtrContainer'>
+    <option value='Q1'>Q1</option>
+    <option value='Q2'>Q2</option>
+    <option value='Q3'>Q3</option>
+    <option vlaue='Q4'>Q4</option>
+
+    </select>
+    </div>
+    </div>
+
+    <div className='chart-container'>
+      
 
            <Bar
+           className='chart'
            data={{
          
          options: {
@@ -137,7 +154,9 @@ return(
                 yAxes: [{
                     stacked: true
                 }]
-            }
+            },
+            responsive: true,
+
         },
 
         labels: ['Internal Process', 'Product', 'Leadership', 'Customer Experience'],
@@ -159,47 +178,11 @@ return(
     ]
     }}
        
-    //     options={{
-    //        responsive: true,
-    //        scales: {
-    //            yAxes: [{
-    //                ticks: {
-    //                    autoSkip: true,
-    //                    maxTicksLimit: 10,
-    //                    beginAtZero: true
-    //                }, 
-    //                gridLines: {
-    //                    display: false,
-    //                    stacked: true
-    //                }
-    //            }],
-    //            xAxes: [{
-    //                gridLines: false,
-    //                stacked: true
-    //            }]
-    //        }
-    //    }} 
+   
        
        /> 
 
-    {/* <Line data={resChartData} options={{
-            responsive: true,
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        autoSkip: true,
-                        maxTicksLimit: 10,
-                        beginAtZero: true
-                    }, 
-                    gridLines: {
-                        display: false
-                    }
-                }],
-                xAxes: [{
-                    gridLines: false
-                }]
-            }
-        }} />  */}
+
 
 
 

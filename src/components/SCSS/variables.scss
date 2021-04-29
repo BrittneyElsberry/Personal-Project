@@ -64,13 +64,12 @@ $ubuntu: 'Ubuntu', sans-serif;
   left: -100%;
   box-sizing: border-box;
   position: absolute;
-  // position: fixed;
   background-color: #4a4e69;
   opacity: 2;
   overflow: hidden;
   left: 0;
   transition: 0.5s;
-  // z-index: -4;
+  z-index: 3;
   opacity: 0.90;
 }
 
@@ -78,11 +77,10 @@ $ubuntu: 'Ubuntu', sans-serif;
 @mixin menu-btn-cont{
   display: flex;
   flex-direction: column;
-  // justify-content: flex-start;
   height: 110vh;
   margin-top: 10%;
   font-family: $roboto-slab;
-  // padding: 2%;
+
 }
 
 @mixin border-theme{

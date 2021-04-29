@@ -8,6 +8,7 @@ import axios from 'axios'
 import {AiFillDelete} from 'react-icons/ai'
 import {AiFillEdit} from 'react-icons/ai'
 import {AiFillSave} from 'react-icons/ai'
+import {AiOutlineComment} from 'react-icons/ai'
 
 
 class Edit extends Component {
@@ -94,7 +95,7 @@ console.log(this.state.savedComment, 'this is this.state.savedComment.feedback_i
                             
 
                         <div className='commentContainer' key={com.comment_id}>
-                        <li className='co'>{com.comment}</li>
+                        <li className='comment'>{com.comment}</li>
     
                         </div> )
                       } else {
@@ -163,10 +164,9 @@ console.log(this.state.savedComment, 'this is this.state.savedComment.feedback_i
                    
                     <button 
                     className='commentbtn'
-                    onClick={()=>this.addComment(this.state.comment, this.props.feedback_id)}
-                    
-                    
-                    >Comment</button>
+                    onClick={()=>this.addComment(this.state.comment, this.props.feedback_id)}>
+                    <AiOutlineComment className='comment-ico' size={28}/>
+                    </button>
                 </div>
 
 
