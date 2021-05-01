@@ -32,10 +32,13 @@ useEffect(()=>{
 
 }, [])
 
-console.log(directory)
+console.log(directory, 'team directory')
 console.log('this is the directory')
 
 
+// const extractNames = ()=>{
+
+// }
 
 
 
@@ -50,8 +53,8 @@ return(
     <br></br>
   
         {  directory && directory.map((empList)=> {
-            return <Link to={`/myfeedback/${empList.user_id}`}>
-            <div key={empList.user_id} ><li className='teamList' > {empList.username}</li></div>  </Link>
+            return <Link to={`/myfeedback/${empList.user_id}` } className='linkstyle'>
+            <ul key={empList.user_id} ><li className='teamList' > {empList.username.split(/@testcompany\.com/)}</li></ul>  </Link>
                                                     })  
         } 
 

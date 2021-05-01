@@ -47,7 +47,7 @@ $ubuntu: 'Ubuntu', sans-serif;
 @mixin sliding-menu-cont {
   display: flex;
   flex-direction: column;
-  height: 110vh;
+  height: 100vh;
   width: 80vw;
   left: -100%;
   box-sizing: border-box;
@@ -60,7 +60,7 @@ $ubuntu: 'Ubuntu', sans-serif;
 @mixin sliding-menu-cont-active {
   display: flex;
   flex-direction: column;
-  height: 150vh;
+  height: 100vh;
   left: -100%;
   box-sizing: border-box;
   position: absolute;
@@ -77,9 +77,11 @@ $ubuntu: 'Ubuntu', sans-serif;
 @mixin menu-btn-cont{
   display: flex;
   flex-direction: column;
-  height: 110vh;
+  // justify-content: flex-start;
+  height: 100vh;
   margin-top: 10%;
   font-family: $roboto-slab;
+  // background-color: aquamarine;
 
 }
 
@@ -95,9 +97,8 @@ $ubuntu: 'Ubuntu', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  // margin-top: 5%;
   font-size: 0.75rem;
-  // height: 50vh;
+
   list-style: none;
   padding: 4%;
   overflow-wrap: break-word;
@@ -145,7 +146,8 @@ $ubuntu: 'Ubuntu', sans-serif;
 $breakpoint-phone: 100px;
 $breakpoint-large-phone: 425px;
 $breakpoint-tablet: 768px;
-$breakpoint-laptop: 1200px;
+$breakpoint-ipad: 1000px;
+$breakpoint-laptop: 1400px;
 $breakpoint-desktop: 1800px;
 
 
@@ -161,8 +163,15 @@ $breakpoint-desktop: 1800px;
     @media screen and (max-width: 768px) {@content;}
   }
   @else if $point == tablet{
-    @media screen and (max-width: 1200px) {@content;}
+    @media screen and (max-width: 1000px) {@content;}
   }
+
+  @else if $point == ipad{
+    @media screen and (max-width: 1400px) {@content;} 
+    
+    }
+  
+
   @else if $point == laptop {
     @media screen and(max-width: 1800px) {@content;}
   }

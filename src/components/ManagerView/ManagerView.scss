@@ -1,13 +1,55 @@
 @import '../SCSS/variables.scss';
 
 
-
-
-
 @include breakpoints (phone){
     @media (max-width: $breakpoint-large-phone){
+
+        .managerviewContainer{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 15%;
+        }
         .teamList {
           text-decoration: none;  
+          font-family: $roboto-slab;
+          font-size: 0.75rem;
+          color: $color-navy;
+        //   justify-content: center;
+        }
+        
+        .teamListContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5%;
+            margin-top: 15% !important;
+            overflow: auto;
+            // height: 40vh;
+            width: 60vw;
+            padding: 3%;
+            background-color: $color-white;
+     
+
+        }
+
+        .myteam {
+            // font-size: 1.20rem;
+            font-weight: bold;
+            font-family: $roboto-slab;
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+        }
+
+        .linkstyle{
+
+            line-height: 2;
+            link:hover {
+                color: $color-mauve;
+                text-decoration: underline;
+            }
         }
 
     }
@@ -18,6 +60,64 @@
     @media (min-width: $breakpoint-large-phone)and (max-width: $breakpoint-tablet){
         
     }
+}
+
+@include breakpoints(ipad){
+    @media(min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop){
+
+    
+        .managerviewContainer{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 15%;
+        }
+        .teamList {
+          text-decoration: none;  
+          font-family: $roboto-slab;
+          font-size: 1.75rem;
+          color: $color-navy;
+        //   justify-content: center;
+        }
+        
+        .teamListContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5%;
+            margin-top: 15% !important;
+            overflow: auto;
+            // height: 40vh;
+            width: 60vw;
+            padding: 3%;
+            background-color: $color-white;
+     
+
+        }
+
+        .myteam {
+            // font-size: 1.20rem;
+            font-weight: bold;
+            font-family: $roboto-slab;
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+        }
+
+        .linkstyle{
+
+            line-height: 2;
+            link:hover {
+                color: $color-mauve;
+                text-decoration: underline;
+            }
+        }
+
+
+
+    }
+
 }
 
 
@@ -33,28 +133,90 @@
     }
 }
 
-.teamListContainer {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    background-color: purple;
-    height: 60vh;
-    width: 60vw;
-    padding:10%;
+// .teamListContainer {
+//     display: flex;
+//     margin: auto;
+//     flex-direction: column;
+//     background-color: purple;
+//     height: 60vh;
+//     width: 60vw;
+//     padding:10%;
    
-    @include border-theme;
-}
+//     @include border-theme;
+// }
 
-.teamList {
+// .teamList {
   
+//     text-decoration: none;  
+//     list-style: none;
+//     color: $color-grey;
+//     font-family: $roboto-slab;
+  
+//   }
+
+//   .myteam {
+//       font-size: 2em;
+//       align-items: center;
+//   }
+
+
+//   .teamList {
+//     text-decoration: none;  
+//     font-family: $roboto-slab;
+//     font-size: 0.75rem;
+//     color: $color-navy;
+//   }
+  
+//   .teamListContainer{
+//       border-radius: 5%;
+//       margin-top: 10% !important;
+//       overflow: auto;
+//       height: 80vh;
+//       width: 80vw;
+//       padding: 3%;
+
+
+//   }
+
+  .myteam {
+      font-size: 0.70rem;
+      font-family: $roboto-slab;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+  }
+
+ 
+  .teamList {
     text-decoration: none;  
-    list-style: none;
-    color: $color-grey;
     font-family: $roboto-slab;
+    font-size: 0.75rem;
+    color: $color-navy;
+  }
   
+  .teamListContainer{
+      border-radius: 5%;
+      margin-top: 10% !important;
+      overflow: auto;
+      padding: 5%;
+      background-color: $color-white;
+
+
   }
 
   .myteam {
-      font-size: 2em;
-      align-items: center;
+      font-size: 0.70rem;
+      font-family: $roboto-slab;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+  }
+
+  .linkstyle{
+
+      line-height: 2;
+      link:hover {
+          color: $color-mauve;
+          text-decoration: underline;
+      }
   }
